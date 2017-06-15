@@ -42,3 +42,48 @@ retinaBackground($image, $ext = 'png') {
 		background-image url('../images/' + $image + '@2x.' + $ext)
 	}
 }
+// Define flex container
+flexbox_display()
+	display -webkit-box
+	display -moz-box
+	display -ms-flexbox
+	display -webkit-flex
+	display flex
+
+// Set flex property of the flexible element
+flex(values)
+	-webkit-box-flex values
+	-moz-box-flex values
+	-webkit-flex values
+	-ms-flex values
+	flex values
+
+// Set transition effect
+transition(values)
+	-webkit-transition values
+	-moz-transition values
+	-o-transition values
+	transition values
+
+// Convert px to em
+px_to_em(size, local_font_size = $base_font_size)
+	unit(size / local_font_size, em) 
+
+// Convert px to percent
+px_to_percent(size, base = $base_container_width)
+	size / base * 100%
+
+// Set padding top & bottom in em
+padding-y_em(top, bottom, base = $base_font_size)
+	padding-top px_to_em(top, base)
+	padding-bottom px_to_em(bottom, base)
+
+// Set padding left & right in em
+padding-x_em(top, bottom, base = $base_font_size)
+	padding-left px_to_em(top, base)
+	padding-right px_to_em(bottom, base)
+
+// Set padding left & right in percent
+padding-x_percent(left, right, base = $base_container_width)
+	padding-left px_to_percent(left, base)
+	padding-right px_to_percent(right, base)

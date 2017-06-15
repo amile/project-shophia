@@ -1,0 +1,144 @@
+.header
+	position relative
+	display block
+	
+	&::after
+		position absolute
+		top 100%
+		left 36.11%
+		width 27.7778%
+		content '' 
+		
+		z-index 10
+		padding-bottom 4.2361%
+		background url('../images/triangle.png') no-repeat 0 -1px
+		background-size 100% auto
+		// background-image linear-gradient(16.78deg, #fff 33.2%, transparent 34.5%),
+							// linear-gradient(343.22deg, #fff 33.2%, transparent 34.5%)
+		background-clip border-box
+
+.top-bar
+	padding-y(10px)
+	
+	font-size 11px
+	line-height 1.6364
+	color #393939
+	background-color #f2f2f2
+	
+	&__phone
+		display inline-block
+		
+	&__account
+		float right
+		
+	&__account-item
+		display inline-block
+		line-height 1
+		text-transform uppercase
+		
+		padding-x(30px)
+		border-right 1px solid #393939
+		
+		&:last-child
+			border none
+
+.header__header
+	padding-top 2.7778%
+	padding-bottom 1.1111%
+
+.logo
+	width 15.8333%
+	min-width 160px
+	
+	margin 0 auto
+	outline 1px solid yellow
+	
+	&__logo
+		width 100%
+		height auto
+
+.main-menu
+	float left
+	
+	margin-top .375em
+	
+	&__item
+		display inline-block
+		
+		margin-right 20px
+		font-size 1.125em
+		line-height 1.6667
+
+.follow-menu
+	float right
+	
+	margin-top .75em
+	
+	&__item
+		display inline-block
+		width 34px
+		height 34px
+		
+		margin-right 6px
+		background url('../images/social-media.png') no-repeat
+		background-size cover
+		outline 1px dotted green
+		
+		&:first-child
+			background-position 0 0
+			
+		&:nth-child(2)
+			background-position -46px 0
+			
+		&:nth-child(3)
+			background-position -95px 0
+			
+		&:last-child
+			background-position -141px 0
+		
+.currency-selector
+	position relative
+	float right
+	width 90px
+	
+	margin-top .75em
+	margin-left 40px 
+	padding-y(10px)
+	overflow hidden
+	background-color #000
+	outline 1px solid gray
+	
+	
+	
+	
+	&__selector
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		
+		padding-left 100%
+		background-color transparent
+		border 1px none
+		outline none
+		appearance none
+		
+	&__value
+		padding 0 30px 0 12px
+		font-size 12px
+		line-height 18px
+		color #fff
+		text-transform uppercase
+		
+		
+		&::before
+			position absolute
+			top 16px
+			right 10px
+			width 8px
+			height 4px
+			content ''
+			background url('../images/down.png') no-repeat
+
+

@@ -1,0 +1,27 @@
+include ../button/button
+
+mixin slider(slides)
+	+b.slider&attributes(attributes)
+
+		for img, ind in slides
+
+			- var className = 'slider-hero_active';
+
+			if (ind != 0) 
+				- className = '';
+
+			div.slider__item.slider-hero(class=className data-slide-index=ind)
+				img.slider-hero__img(src=img.src)
+				div.slider-hero__body
+					img.slider-hero__caption.slider-hero__caption_img(src=img.caption_img)
+					+button('Shop now')(class='slider-hero__btn')
+		div.slider__nav.slider-nav
+			
+			for _, ind in slides
+
+				- var className = 'slider-nav__bullet_active';
+
+				if (ind != 0)
+					- className = '';
+
+				span.slider-nav__bullet(class=className data-bullet-index=ind)

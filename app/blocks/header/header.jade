@@ -1,0 +1,29 @@
+include ../container/container
+include ../list/list
+
+mixin header()
+	+b('header').header&attributes(attributes)
+
+			- var topBar = ['Welcome MSG!', 'My account', 'My wishlist', 'Login'];
+			- var mainMenu = ['Home', 'Gallery', 'Categories', 'Pages'];
+
+			section.top-bar
+				+container
+					.top-bar__phone= 'Call +001 555 881'
+					+list(topBar, 'top-bar__account-item')(class='top-bar__account')
+			section.header__header
+				+container
+					nav.main-menu
+						+list(mainMenu, 'main-menu__item')
+
+					.currency-selector
+						p.currency-selector__value rupiah
+						select.currency-selector__selector
+							option(value='rupiah' selected) rupiah
+							option(value='usd') usd
+							option(value='euro') euro
+
+					nav.follow-menu
+						+list(['', '', '', ''], 'follow-menu__item')
+					.logo
+						img.logo__logo(src='./assets/images/logo.png' alt='Shophia')

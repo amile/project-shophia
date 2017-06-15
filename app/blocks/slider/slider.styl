@@ -1,0 +1,75 @@
+.slider
+	position relative
+	display block
+	overflow hidden
+	
+	padding-bottom 48.0556%
+	outline 1px solid green
+	
+	&__item
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		outline 1px dashed tomato
+		
+	&__nav
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		
+		padding-y(2.0139%)
+		line-height 0
+		text-align center
+		outline 1px dotted yellow
+		
+.slider-hero
+	display none
+	text-align center
+
+	&_active
+		display block
+		
+	&__img
+		position absolute
+		top 0
+		left 0
+		min-width 100%
+		height 100%
+	
+	&__body
+		position absolute
+		top 8.6705%
+		left 0
+		bottom 11.1272%
+		width 100%
+		text-align center
+		
+	&__caption
+		margin 5.2083% auto 3.125%
+		
+	&__caption_img
+		display block
+		width 19.2361% // 277px
+		// height 43.0124% // 277px
+		
+	&__btn
+		position absolute
+		left 50%
+		bottom 14.4144%
+		transform translate(-50%)
+		
+.slider-nav
+	&__bullet
+		display inline-block
+		width 18px
+		height 19px
+		background url('../images/slider-nav.png') no-repeat
+		outline 1px solid brown
+		
+		&_active
+			background url('../images/slider-nav-active.png') no-repeat
+		
+	
