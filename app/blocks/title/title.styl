@@ -1,14 +1,19 @@
 .title
+	position relative
 	display block
 	text-align center
 	
-	margin-y(50px)
-	background url('../images/title-hr-line.png') repeat-x 0 50%
+	padding-y(45px)
+	background-color white
+	
+	&__container
+		background url('../images/title-hr-line.png') repeat-x 0 50%
+		background-clip content-box
 	
 	&__text
 		position relative
 		display inline-block
-		min-width 500px// 36.2319%
+		min-width 500px // 36.2319%
 		
 		padding-x(7.2464%)
 		font-size 29.6px

@@ -5,12 +5,13 @@ mixin testimonial(testimonial, right=false)
 		- var bodyClass = '';
 		if right 
 			- photoWrapClass = 'testimonial__photo-wrapper_right';
-			- bodyClass = 'testimonial__body_right';
+			- bodyClass = 'testimonial__body-wrapper_right';
 
 		.testimonial__photo-wrapper(class=photoWrapClass)
 			img.testimonial__photo(src=testimonial.photo alt='Photo')
 		.testimonial__body-wrapper(class=bodyClass)
+
 			.testimonial__body
-				blockquot.testimonial__text= testimonial.txt
+				blockquot.testimonial__text!= testimonial.txt
 				p.testimonial__author-name= testimonial.authorName
 				p.testimonial__author-job= testimonial.authorJob

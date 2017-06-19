@@ -12,25 +12,30 @@ mixin main()
 		+slider(slides)
 		section.main__row
 			+container
+
 		section.main__row
+			+title('HandPicked')
 			+container
-				+title('HandPicked')
+				
 		section.main__row
+			+title('Summer Collection')
 			+container
-				+title('Summer Collection')
+				
 		section.main__row
+			+title('Our Brand')
 			+container
 				- var brands = [{src: './assets/images/brand-bakery.png', alt: 'Bakery'}, {src: './assets/images/brand-cavalier.png', alt: 'Cavalier'}, {src: './assets/images/brand-harvest.png', alt: 'Harvest'}, {src: './assets/images/brand-landlock.png', alt: 'Landlock'}, {src: './assets/images/brand-spectrum.png', alt: 'Spectrum'}, {src: './assets/images/brand-home-energy.png', alt: 'Home Energy'}];
-				+title('Our Brand')
+				
 				each i in brands
 					+layout-column(class='col-1-' + brands.length)
 						.brand
 							img.brand__img(src=i.src alt=i.alt)
 
 		section.testimonials.main__row_testimonials
+			+title('Customers Says')(class='testimonials__title')
 			+container
-				- var testimonials = [{photo: './assets/images/SandraDewi.png', txt: 'Sed ut perspiciatis  unde omnis iste natus error sit  voluptate', authorName: 'Sandra Dewi', authorJob: 'Fashion stylish'}, {photo: './assets/images/ShaheerSheikh.png', txt: 'Sed ut perspiciatis  unde omnis iste natus error sit  voluptate', authorName: 'Shaheer Sheikh', authorJob: 'Designer'}];
-				+title('Customers Says')
+				- var testimonials = [{photo: './assets/images/SandraDewi.png', txt: 'Sed ut perspiciatis <br> unde omnis iste natus error sit <br> voluptate accusantium doloremque', authorName: 'Sandra Dewi', authorJob: 'Fashion stylish'}, {photo: './assets/images/ShaheerSheikh.png', txt: 'Sed ut perspiciatis <br> unde omnis iste natus error sit <br> voluptate accusantium doloremque', authorName: 'Shaheer Sheikh', authorJob: 'Designer'}];
+				
 				+layout-column.testimonials__column.col-1-2
 					+testimonial(testimonials[0])
 				+layout-column.testimonials__column.col-1-2
