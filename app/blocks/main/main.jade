@@ -3,6 +3,7 @@ include ../slider/slider
 include ../title/title
 include ../layout-column/layout-column
 include ../testimonial/testimonial
+include ../product/product
 
 mixin main()
 	+b('main').main&attributes(attributes)
@@ -10,16 +11,54 @@ mixin main()
 		- var slides = [{src: './assets/images/slide-2.png', caption_img: './assets/images/sale.png'}, {}, {}, {}];
 		
 		+slider(slides)
-		section.main__row
+		section.main__row.support
 			+container
+				.col-1-3.support__col
+					.support__item.support__item_left
+						span.support__icon.support__icon_shipping
+						p.support__text= 'Free shipping'
+						p.support__text_sm= 'On orders over $200'
+				.col-1-3.support__col
+					.support__item.support__item_center
+						span.support__icon.support__icon_return
+						p.support__text= '30-days returns'
+						p.support__text_sm= 'Money back guarantee'
+				.col-1-3.support__col
+					.support__item.support__item_right
+						span.support__icon.support__icon_support
+						p.support__text= '24/7 support'
+						p.support__text_sm= 'Lifetime support'
 
 		section.main__row
 			+title('HandPicked')
+
+			- var featured = [{link: {href: '#', target: '_blank', class: 'featured__product featured__product_sm'}, img: {src: './assets/images/featured-1_sm.png', alt: 'Some info'}, button: 'Buy now'}, {link: {href: '#', target: '_blank', class: 'featured__product featured__product_sm'}, img: {src: './assets/images/featured-2_sm.png', alt: 'Some info'}}, {link: {href: '#', target: '_blank', class: 'featured__product featured__product_lg'}, img: {src: './assets/images/featured-3_lg.png', alt: 'Some info'}}, {link: {href: '#', target: '_blank', class: 'featured__product featured__product_sm'}, img: {src: './assets/images/featured-4_sm.png', alt: 'Some info'}}, {link: {href: '#', target: '_blank', class: 'featured__product featured__product_sm'}, img: {src: './assets/images/featured-5_sm.png', alt: 'Some info'}}];
+
 			+container
+				ul.col-1-3.featured__col.featured__col_sm
+					li.featured__item
+						+product(featured[0])
+					li.featured__item
+						+product(featured[1])
+				ul.col-1-3.featured__col.featured__col_lg
+					li.featured__item
+						+product(featured[2])
+				ul.col-1-3.featured__col.featured__col_sm
+					li.featured__item
+						+product(featured[3])
+					li.featured__item
+						+product(featured[4])
 				
 		section.main__row
 			+title('Summer Collection')
+
+			- var products = [{link: {href: '#', target: '_blank', class: 'products__product'}, img: {src: './assets/images/product-1.png', alt: 'Some info'}, sale: '20', button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-2.png', alt: 'Some info'}, button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-3.png', alt: 'Some info'}, button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-4.png', alt: 'Some info'}, sale: '40', button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-5.png', alt: 'Some info'}, sale: '20', button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-6.png', alt: 'Some info'}, button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-7.png', alt: 'Some info'}, button: '+ Add to card'}, {link: {href: '#', class: 'products__product'}, img: {src: './assets/images/product-8.png', alt: 'Some info'}, sale: '40', button: '+ Add to card'}];
+
 			+container
+				ul.products
+					for product in products
+						li.products__item.col-1-4
+							+product(product, 'product__button_add-to-card')
 				
 		section.main__row
 			+title('Our Brand')

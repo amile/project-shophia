@@ -43,13 +43,20 @@ retinaBackground($image, $ext = 'png') {
 	}
 }
 // Define flex container
-flexbox_display()
+flexbox-display()
 	display -webkit-box
 	display -moz-box
 	display -ms-flexbox
 	display -webkit-flex
 	display flex
-
+	
+//
+flex-align-items(value)
+	-webkit-align-items value
+	-moz-align-items value
+	-ms-align-items value
+	align-items value
+	
 // Set flex property of the flexible element
 flex(values)
 	-webkit-box-flex values
@@ -57,6 +64,14 @@ flex(values)
 	-webkit-flex values
 	-ms-flex values
 	flex values
+
+// Set order of the flexible element	
+flex-order(value)
+	-webkit-box-ordinal-group value
+	-moz-box-ordinal-group value
+	-ms-flex-order value
+	-webkit-order value
+	order value
 
 // Set transition effect
 transition(values)

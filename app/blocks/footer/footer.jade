@@ -2,5 +2,33 @@ include ../container/container
 
 mixin footer()
 	+b('footer').footer&attributes(attributes)
+
+		- var shops = ['New In', 'Women', 'Men', 'Shoes', 'Bags & Accessories', 'Top Brands', 'Sale & Special Offers', 'Lookbook'];
+
+		- var information = ['About Us', 'Customer Service', 'New Collection', 'Best Sellers','Manufacturers', 'Privacy policy', 'Terms & Condition', 'Blog'];
+
+		- var customerService = ['Search Terms', 'Advanced Search', 'Orders and Returns', 'Contact Us', 'RSS', 'Help & FAQs', 'Consultant', 'Store Locations'];
+
 		+container
-			block
+			.footer__block_top
+				.footer-col.menu-group
+					h2.menu-group__title= 'Shops'
+					+list(shops, 'menu-group__item')
+
+				.footer-col.menu-group
+					h2.menu-group__title= 'Information'
+					+list(information, 'menu-group__item')
+
+				.footer-col.menu-group
+					h2.menu-group__title= 'Customer Service'
+					+list(customerService, 'menu-group__item')
+
+				.footer-col.menu-group
+					h2.menu-group__title= 'Stay connected'
+					+list(['', '', '', '', ''], 'menu-group__item')
+					h2.menu-group__title!= 'Subscribe <i class="menu-group__title_italic">in</i> our news letter'
+					form(method='post' action='')
+						input(type='email' name='email' placeholder='Enter Your Email Address')
+						button(type='submit')= Subscribe
+
+			.footer__block_bottom

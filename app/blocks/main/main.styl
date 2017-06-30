@@ -1,23 +1,111 @@
 /* Main module */
 
 .main
-	display block
+	display block	
 
-	
 .brand
 	width 100%
-	// oveflow hidden
+	text-align center
+	
+	padding-x(15px)
+	overflow hidden
 		
 	&__img
 		max-width 100%
 		
-.testimonials
-		background-color #d9bf8f
+
+
+.support
+	padding-top 50px
 	
-	.col-1-2
-		padding 0
-		color tomato
+	&__col
+		margin-left 0
+		width 33.3333%
 		
+		&:nth-child(2)
+			width 35.347% // 456px / 1290px
+			
+		&:nth-child(n + 2)
+			margin-left -1.0078% // 13px / 1290px
+	
+	&__item
+		position relative
+		padding-top 2.3256% // 10px
+		padding-bottom 3.4884% // 15px
+		color #fff
+		background-repeat no-repeat
+		background-size 100% 100%
+		outline 1px dotted green
+		
+		&_left
+			padding-left 23.2558%
+			background-image url('../images/support-left.png')
+			
+			
+		&_center
+			padding-left 27.4123%
+			background-image url('../images/support-center.png')
+			
+		&_right
+			padding-left 33.7209%
+			background-image url('../images/support-right.png')
+	
+			
+	&__icon
+		position absolute
+		top 1.5em
+		left 0
+		background-repeat no-repeat
+		background-size 100% 100%
+		
+		&_shipping
+			left 6.9767%
+			width 2.37em
+			height 2.37em
+			
+			max-width 38px
+			max-height 38px
+			background-image url('../images/shipping.png')
+			
+		&_return
+			left 14.0351%
+			width 2.56em
+			height 3.62em
+			
+			max-width 41px
+			max-height 42px
+			background-image url('../images/return.png')
+		
+		&_support
+			top 1.25em
+			left 16.2791%
+			width 3em
+			height 3.06em
+			
+			max-width 48px
+			max-height 49px
+			background-image url('../images/support.png')
+
+	&__text
+		font-size 1.5em
+		font-weight 700
+		line-height 1.8
+		text-transform uppercase
+		
+		&_sm
+			font-size .875em
+			text-transform capitalize
+			
+		@media screen and (min-width: 1440px)
+			font-size 1.875em
+
+		
+.testimonials
+	background-color #d9bf8f
+	
+	&__column
+		padding 0
+	
 	&__title::after
 		position absolute
 		top 100%
@@ -29,3 +117,48 @@
 		padding-bottom 2.4306%
 		background url('../images/triangle-22.png') no-repeat 
 		background-size cover
+
+.products
+	padding 15px 15px 0
+	border 1px solid #f8f8f8
+	clearfix()
+	
+	&__item
+		margin-bottom 15px
+
+	&__item:nth-child(4n + 1) 
+		.button
+			background-color #f0985e
+			
+			&::before
+				border-right-color #f0985e
+				border-bottom-color #f0985e
+				
+			&::after
+				border-left-color #f0985e
+				border-bottom-color #f0985e
+		
+	
+	&__product
+		padding-bottom 116.66%
+		
+.featured
+		
+	&__col
+		margin-right 1.1628%
+			
+		&_sm
+			width 31.0078%
+
+		&_lg
+			width 35.6589%
+		
+	&__item
+		margin-bottom 3.75%	
+	
+	&__product_sm
+		padding-bottom 100%
+		
+	&__product_lg
+		padding-bottom 177.1739%
+	

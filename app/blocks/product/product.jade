@@ -1,0 +1,10 @@
+mixin product(product, buttonClass='product__button')
+	+b('a').product&attributes(product.link)
+		img.product__img&attributes(product.img)
+
+		if product.button
+			+button(class=buttonClass)= product.button
+
+		if product.sale
+			div.product__sale= product.sale
+				span.product__sale_percent= '%'
