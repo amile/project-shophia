@@ -1,0 +1,6 @@
+mixin social(social, prefix='')
+	+b('ul').social&attributes(attributes)
+		for item in social
+			li.social__item(class= prefix + 'social-item')
+				a.social__link()&attributes(item.link)
+					img.social__icon()&attributes(item.img)

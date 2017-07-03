@@ -1,2 +1,138 @@
 .footer
 	display block
+	
+	padding-bottom 40px
+	color #6a6a6a
+	background-color #000
+	
+	&__block_top
+		position relative
+		padding-top 50px
+		padding-bottom 70px
+		background-color #141414
+		border-bottom 2px solid #363636
+		
+		&::after
+			position absolute
+			top 100%
+			left 50%
+			width 24px
+			height 10px
+			
+			margin-left -12px
+			content ''
+			background url('../images/footer-triangle.png') no-repeat
+					
+	&__block_bottom
+		padding-top 25px
+		padding-bottom 70px
+		color #363636
+		background-color #141414
+		
+	&__col_right
+		text-align center
+		
+	&__social
+		margin-bottom 2.18em
+	
+	&__social-item
+			width 3.125em
+			height 3.125em
+			
+			margin-right 1em
+
+.menu-group
+	display inline-block
+	
+	margin-right 11.6279% // 90px
+	text-align left
+	
+	padding-x(5px)
+	
+	&:nth-child(2)
+		margin-right 12.9199% // 100px
+	
+	&__title
+		margin-bottom 2.18em// 35px
+		font-weight 700
+		line-height 1.875 // 30px
+		color #fff
+		text-transform uppercase
+		
+		&_italic
+			font-weight 400
+			font-style italic
+			text-transform none
+		
+	&__item
+		font-size .875em
+		line-height 2.1429
+		color #6a6a6a
+	
+	&_service
+		margin-right 0
+		
+	&_connected
+		margin 0 auto
+
+		
+.form
+	padding 4px
+	border 1px solid #363636
+	
+	&__input
+		width 65%
+		
+		padding-x(1.5em)
+		font-size .75em
+		line-height 2.5
+		color #363636
+		background-color #141414
+		border none
+
+	&__button
+		padding .83em 1.66em
+		font-size .75em
+		color #fff
+		background-color #363636
+
+.copyright
+	font-size .69em
+	line-height 1.6364
+	color #6a6a6a
+	
+.payments
+	margin-top 1.56em // 25px
+	
+	&__item
+		display inline-block
+		
+		margin-right 15px
+		line-height 27px
+	
+	&__icon
+		vertical-align middle
+	
+.arrow-up
+	float right
+	width 40px
+	height 40px
+	
+	margin-top -40px
+	background-color #000
+	border-radius 4px
+	
+	&__link
+		display inline-block
+		width 100%
+		height 100%
+		
+	&__icon
+		display inline-block
+		width 17px
+		height 11px
+		
+		margin 14px 11px
+		background url('../images/arrow-up.png') no-repeat
+
+		

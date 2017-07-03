@@ -1,4 +1,9 @@
-mixin list(list_of_items, items_class_name='')
+mixin list(list_of_items, prefix='')
 	+b('ul').list&attributes(attributes)
 		for el in list_of_items
-			li.list__item(class=items_class_name)!= el
+			if el.aLink
+				li.list__item(class=prefix + 'item')
+					a.link.list__link(class=prefix + 'list')&attributes(el.aLink)!= el.value
+			else
+				li.list__item(class=prefix + 'item')!= el
+					block

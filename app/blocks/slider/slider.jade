@@ -11,6 +11,7 @@ mixin slider(slides)
 				- className = '';
 
 			div.slider__item.slider-hero(class=className data-slide-index=ind)
+				.index= ind
 				img.slider-hero__img(src=img.src)
 				div.slider-hero__body
 					img.slider-hero__caption.slider-hero__caption_img(src=img.caption_img)

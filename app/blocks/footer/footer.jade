@@ -1,4 +1,5 @@
 include ../container/container
+include ../social/social
 
 mixin footer()
 	+b('footer').footer&attributes(attributes)
@@ -9,26 +10,45 @@ mixin footer()
 
 		- var customerService = ['Search Terms', 'Advanced Search', 'Orders and Returns', 'Contact Us', 'RSS', 'Help & FAQs', 'Consultant', 'Store Locations'];
 
-		+container
-			.footer__block_top
-				.footer-col.menu-group
-					h2.menu-group__title= 'Shops'
-					+list(shops, 'menu-group__item')
+		- var social = [{link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-fb.png', alt: 'fb'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-twitter.png', alt: 'twitter'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-instagram.png', alt: 'instagram'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-pinterest.png', alt: 'pinterest'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-feed.png', alt: 'feed'}}];
+		
+		.footer__block_top
+			+container
+				.col-3-5
+					.footer__col.menu-group.menu-group_shops
+						h2.menu-group__title= 'Shops'
+						+list(shops, 'menu-group__')
 
-				.footer-col.menu-group
-					h2.menu-group__title= 'Information'
-					+list(information, 'menu-group__item')
+					.footer__col.menu-group.menu-group_information
+						h2.menu-group__title= 'Information'
+						+list(information, 'menu-group__')
 
-				.footer-col.menu-group
-					h2.menu-group__title= 'Customer Service'
-					+list(customerService, 'menu-group__item')
+					.footer__col.menu-group.menu-group_service
+						h2.menu-group__title= 'Customer Service'
+						+list(customerService, 'menu-group__')
 
-				.footer-col.menu-group
-					h2.menu-group__title= 'Stay connected'
-					+list(['', '', '', '', ''], 'menu-group__item')
-					h2.menu-group__title!= 'Subscribe <i class="menu-group__title_italic">in</i> our news letter'
-					form(method='post' action='')
-						input(type='email' name='email' placeholder='Enter Your Email Address')
-						button(type='submit')= Subscribe
+				.col-2-5.footer__col_right
+					.menu-group.menu-group_connected
+						h2.menu-group__title= 'Stay connected'
+						+social(social, 'footer__')(class='footer__social')
 
-			.footer__block_bottom
+						h2.menu-group__title!= 'Subscribe <i class="menu-group__title_italic">in</i> our news letter'
+						form.form(method='post' action='')
+							input.form__input(type='email' name='email' placeholder='Enter Your Email Address')
+							button.button.form__button(type='submit')= 'Subscribe'
+
+		.footer__block_bottom
+
+			- var payments =[{src: './assets/images/payment-visa.png', alt: 'Visa'}, {src: './assets/images/payment-mastercard.png', alt: 'MasterCard'}, {src: './assets/images/payment-american.png', alt: 'American Express'}, {src: './assets/images/payment-discover.png', alt: 'Discover'}];
+
+			+container
+				p.copyright!= '&copy; 2015  Shopia  Fashion Store Shopify. <br>All Rights Reserved. Ecommerce Software by Shopify. <br>Designed by MoccaLabs.com'
+
+				.arrow-up
+					a.arrow-up__link(href='#')
+						span.arrow-up__icon
+
+				ul.payments
+					for payment in payments
+						li.payments__item
+							img(class='payments__icon' src=payment.src alt=payment.alt)

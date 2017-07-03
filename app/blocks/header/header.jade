@@ -4,17 +4,20 @@ include ../list/list
 mixin header()
 	+b('header').header&attributes(attributes)
 
-			- var topBar = ['Welcome MSG!', 'My account', 'My wishlist', 'Login'];
-			- var mainMenu = ['Home', 'Gallery', 'Categories', 'Pages'];
+			- var topBar = [{aLink: {href: '#'}, value: 'Welcome MSG!'}, {aLink: {href: '#'}, value: 'My account'}, {aLink: {href: '#'}, value: 'My wishlist'}, {aLink: {href: '#'}, value: 'Login'}];
+
+			- var mainMenu = [{aLink: {href: '#'}, value: 'Home'}, {aLink: {href: '#'}, value: 'Gallery'}, {aLink: {href: '#'}, value: 'Categories'}, {aLink: {href: '#'}, value: 'Pages'}];
+
+			- var social = [{link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-fb.png', alt: 'fb'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-twitter.png', alt: 'twitter'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-pinterest.png', alt: 'pinterest'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-instagram.png', alt: 'instagram'}}];
 
 			section.top-bar
 				+container
-					.top-bar__phone= 'Call +001 555 881'
-					+list(topBar, 'top-bar__account-item')(class='top-bar__account')
+					p.top-bar__phone= 'Call +001 555 881'
+					+list(topBar, 'top-bar__account-')(class='top-bar__account')
 			section.header__header
 				+container
 					nav.main-menu
-						+list(mainMenu, 'main-menu__item')
+						+list(mainMenu, 'main-menu__')
 
 					.currency-selector
 						p.currency-selector__value rupiah
@@ -23,7 +26,6 @@ mixin header()
 							option(value='usd') usd
 							option(value='euro') euro
 
-					nav.follow-menu
-						+list(['', '', '', ''], 'follow-menu__item')
+					+social(social, 'header__')(class='header__social')
 					.logo
 						img.logo__logo(src='./assets/images/logo.png' alt='Shophia')
