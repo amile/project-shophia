@@ -5,12 +5,12 @@ mixin slider(slides)
 
 		for img, ind in slides
 
-			- var className = 'slider-hero_active';
+			- var classNameActive = 'slider__item_active';
 
 			if (ind != 0) 
-				- className = '';
+				- classNameActive = '';
 
-			div.slider__item.slider-hero(class=className data-slide-index=ind)
+			div.slider__item.slider-hero(class=classNameActive data-slide-index=ind)
 				.index= ind
 				img.slider-hero__img(src=img.src)
 				div.slider-hero__body
@@ -20,9 +20,9 @@ mixin slider(slides)
 			
 			for _, ind in slides
 
-				- var className = 'slider-nav__bullet_active';
+				- var classNameActive = 'slider-nav__bullet_active';
 
 				if (ind != 0)
-					- className = '';
+					- classNameActive = '';
 
-				span.slider-nav__bullet(class=className data-bullet-index=ind)
+				span.slider-nav__bullet(class=classNameActive data-bullet-index=ind)
