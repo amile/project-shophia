@@ -8,7 +8,7 @@ include ../product/product
 mixin main()
 	+b('main').main&attributes(attributes)
 
-		- var slides = [{src: './assets/images/slide-2.png', caption_img: './assets/images/sale.png'}, {}, {}, {}];
+		- var slides = [{src: './assets/images/slide-2.png', caption_img: './assets/images/sale.png'}, {src: './assets/images/slide-2.png'}, {src: './assets/images/slide-2.png'}, {src: './assets/images/slide-2.png'}];
 		
 		+slider(slides)
 		section.main__row.support
