@@ -13,8 +13,7 @@
 		padding-bottom 4.2361%
 		background url('../images/triangle-11.png') no-repeat 0 -1px
 		background-size 100% auto
-		// background-image linear-gradient(16.78deg, #fff 33.2%, transparent 34.5%),
-							// linear-gradient(343.22deg, #fff 33.2%, transparent 34.5%)
+						
 		background-clip border-box
 
 .top-bar
@@ -59,14 +58,16 @@
 			border none
 
 .header__header
-	padding-top 2.7778%
-	padding-bottom 1.1111%
+	padding-top 32px // 
+	padding-bottom 18px //
+	text-align center
 
 .logo
-	width 15.8333%
+	display inline-block
+	width 14.25em //  228px
 	min-width 160px
 	
-	margin 0 auto
+	margin-left 26px // 5.5072% // 76px / 1380px
 	outline 1px solid yellow
 	
 	&__logo
@@ -76,37 +77,61 @@
 .main-menu
 	float left
 	
-	margin-top .375em
+	margin-top .56em
+	margin-left 5px
 	
 	&__item
 		display inline-block
 		
-		margin-right 20px
+		margin-right 20px //
+		font-family 'Playfair Display', serif
 		font-size 1.125em
-		line-height 1.6667
+		font-style italic
+		// line-height 1.6667
 
 .header__social
 	float right
 	
-	margin-top .75em
+	margin-top .67em
 	
 	&-item
 		width 34px
 		height 34px
 		
-		margin-right 6px
+		margin-right 9px
 		
+.cart
+	position relative
+	float right
+	width 3em
+	height 3em
+	
+	margin-top .3em
+	margin-left 20px
+	
+	&__img
+		width 100%
+		height 100%
+		
+	&__count
+		position absolute
+		top 0
+		left 0
+		width 100%
+		font-size .875em
+		line-height 4.5
+		text-align center
+		color #fff
+
 .currency-selector
 	position relative
 	float right
-	width 90px
 	
 	margin-top .75em
-	margin-left 40px 
-	padding-y(10px)
+	margin-left 48px // 
+	padding-y(.625em)
 	overflow hidden
 	background-color #000
-	outline 1px solid gray	
 	
 	&__selector
 		position absolute
@@ -116,22 +141,22 @@
 		height 100%
 		
 		padding-left 100%
+		// visibility hidden
 		background-color transparent
 		border 1px none
 		outline none
 		appearance none
 		
 	&__value
-		padding 0 30px 0 12px
-		font-size 12px
-		line-height 18px
+		width 7.41em
+		padding 0 30px 0 14px
+		font-size .75em
+		font-weight 600
+		line-height 1.25
 		color #fff
 		
 		text-align center
 		text-transform uppercase
-		
-		
-		
 		
 		&::before
 			position absolute

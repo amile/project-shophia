@@ -3,27 +3,31 @@
 	display block
 	text-align center
 	
-	padding-y(45px)
+	padding-y(50px)
 	background-color white
 	
 	&__container
-		background url('../images/title-hr-line.png') repeat-x 0 50%
+		background url('../images/title-hr-line.png') repeat-x 0 56.5%
 		background-clip content-box
 	
 	&__text
 		position relative
 		display inline-block
-		min-width 500px // 36.2319%
+		// min-width 500px // 36.2319%
 		
-		padding-x(7.2464%)
+		padding-x(170px)
+		font-family 'Playfair Display', serif
 		font-size 29.6px
-		line-height 50px
+		font-style italic
+		line-height 48px
+		
+		font-weight 700
 		text-align center
 		background-color white
 		
 		&::before
 			position absolute
-			top 50%
+			top 60%
 			left 12%
 			width 20px
 			height 24px
@@ -33,12 +37,6 @@
 			background url('../images/title-img.png') no-repeat
 		
 		&::after
-			position absolute
-			top 50%
+			@extends .title__text::before
+			left auto
 			right 12%
-			width 20px
-			height 24px
-			
-			margin-top -12px
-			content ''
-			background url('../images/title-img.png') no-repeat

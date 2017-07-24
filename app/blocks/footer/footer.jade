@@ -13,7 +13,7 @@ mixin footer()
 		- var social = [{link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-fb.png', alt: 'fb'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-twitter.png', alt: 'twitter'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-instagram.png', alt: 'instagram'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-pinterest.png', alt: 'pinterest'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-feed.png', alt: 'feed'}}];
 		
 		.footer__block_top
-			+container
+			+container(class='footer__container_block-top')
 				.col-3-5
 					.footer__col.menu-group.menu-group_shops
 						h2.menu-group__title= 'Shops'
@@ -32,7 +32,7 @@ mixin footer()
 						h2.menu-group__title= 'Stay connected'
 						+social(social, 'footer__')(class='footer__social')
 
-						h2.menu-group__title!= 'Subscribe <i class="menu-group__title_italic">in</i> our news letter'
+						h2.menu-group__title!= 'Subscribe <i class="menu-group__title_italic"> to </i> our newsletter'
 						form.form(method='post' action='')
 							input.form__input(type='email' name='email' placeholder='Enter Your Email Address')
 							button.button.form__button(type='submit')= 'Subscribe'
@@ -42,6 +42,7 @@ mixin footer()
 			- var payments =[{src: './assets/images/payment-visa.png', alt: 'Visa'}, {src: './assets/images/payment-mastercard.png', alt: 'MasterCard'}, {src: './assets/images/payment-american.png', alt: 'American Express'}, {src: './assets/images/payment-discover.png', alt: 'Discover'}];
 
 			+container
+				hr.horizontal-line
 				p.copyright!= '&copy; 2015  Shopia  Fashion Store Shopify. <br>All Rights Reserved. Ecommerce Software by Shopify. <br>Designed by MoccaLabs.com'
 
 				.arrow-up

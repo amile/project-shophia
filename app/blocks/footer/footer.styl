@@ -4,36 +4,26 @@
 	padding-bottom 40px
 	color #6a6a6a
 	background-color #000
+	// opacity .6
 	
 	&__block_top
 		position relative
-		padding-top 50px
-		padding-bottom 70px
+		padding-top 3.75em // 60px
+		padding-bottom 3.44em // 55px
 		background-color #141414
-		border-bottom 2px solid #363636
-		
-		&::after
-			position absolute
-			top 100%
-			left 50%
-			width 24px
-			height 10px
-			
-			margin-left -12px
-			content ''
-			background url('../images/footer-triangle.png') no-repeat
 					
 	&__block_bottom
-		padding-top 25px
-		padding-bottom 70px
+		padding-top 1.56em // 25px
+		padding-bottom 4.87em // 78px
 		color #363636
 		background-color #141414
 		
 	&__col_right
-		text-align center
+		padding-left 8px
 		
 	&__social
-		margin-bottom 2.18em
+		margin-top 2.56em // 41px
+		margin-bottom 2.25em // 36px
 	
 	&__social-item
 			width 3.125em
@@ -41,25 +31,43 @@
 			
 			margin-right 1em
 
+.horizontal-line
+	position relative
+	margin-bottom 1.62em // 26px
+	border none
+	border-bottom 1px solid #363636
+	
+	&::after
+		position absolute
+		top 100%
+		left 50%
+		width 24px
+		height 10px
+		
+		margin-left -12px
+		content ''
+		background url('../images/footer-triangle.png') no-repeat
+
 .menu-group
 	display inline-block
 	
-	margin-right 11.6279% // 90px
+	margin-right 107px //
 	text-align left
 	
-	padding-x(5px)
+	padding-x(8px)
 	
 	&:nth-child(2)
 		margin-right 12.9199% // 100px
 	
 	&__title
-		margin-bottom 2.18em// 35px
+		margin-bottom 2.375em // 38px
 		font-weight 700
 		line-height 1.875 // 30px
 		color #fff
 		text-transform uppercase
 		
 		&_italic
+			padding-x(.14em)
 			font-weight 400
 			font-style italic
 			text-transform none
@@ -77,11 +85,13 @@
 
 		
 .form
+	margin-top 48px
+	margin-left 3px
 	padding 4px
 	border 1px solid #363636
 	
 	&__input
-		width 65%
+		width 249px
 		
 		padding-x(1.5em)
 		font-size .75em
@@ -91,7 +101,7 @@
 		border none
 
 	&__button
-		padding .83em 1.66em
+		padding .75em 1.42em
 		font-size .75em
 		color #fff
 		background-color #363636
@@ -102,13 +112,17 @@
 	color #6a6a6a
 	
 .payments
-	margin-top 1.56em // 25px
+	margin-top 1.25em // 20px
+	padding-left 5px
 	
 	&__item
 		display inline-block
 		
-		margin-right 15px
-		line-height 27px
+		margin-right 1.56em // 25px
+		line-height 1.69em // 27px
+		
+		&:nth-child(n + 2)
+			margin-right 1.125em // 18px
 	
 	&__icon
 		vertical-align middle
@@ -118,7 +132,8 @@
 	width 40px
 	height 40px
 	
-	margin-top -40px
+	margin-top -2.18em // -35px
+	margin-right 3px
 	background-color #000
 	border-radius 4px
 	

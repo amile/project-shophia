@@ -3,7 +3,8 @@ mixin product(product, buttonClass='product__button')
 		img.product__img&attributes(product.img)
 
 		if product.button
-			+button(class=buttonClass)= product.button
+			.product__button-wrapper
+				+button(class=buttonClass)= product.button
 
 		if product.sale
 			div.product__sale= product.sale

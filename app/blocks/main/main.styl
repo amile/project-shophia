@@ -1,7 +1,35 @@
 /* Main module */
 
 .main
-	display block	
+	display block
+	
+	&__row
+		// opacity .6
+		
+		&_featured
+			padding-top 40px
+		
+		&_recent-products
+			padding-top 28px
+		
+		&_brands
+			padding-top 52px
+			
+		&_testimonials
+			padding-top 89px
+
+.brands
+	
+	font-size 0
+
+	&__title
+		margin-bottom 61px
+		
+	&__column
+		display inline-block
+		float none
+		vertical-align middle
+		
 
 .brand
 	width 100%
@@ -16,7 +44,7 @@
 
 
 .support
-	padding-top 50px
+	padding-top 65px //
 	
 	&__col
 		margin-left 0
@@ -30,8 +58,8 @@
 	
 	&__item
 		position relative
-		padding-top 2.3256% // 10px
-		padding-bottom 3.4884% // 15px
+		padding-top .625em //  10px
+		padding-bottom 1.125em // 18px
 		color #fff
 		background-repeat no-repeat
 		background-size 100% 100%
@@ -43,23 +71,23 @@
 			
 			
 		&_center
-			padding-left 27.4123%
+			padding-left 28.0702% // 128px / 456px
 			background-image url('../images/support-center.png')
 			
 		&_right
-			padding-left 33.7209%
+			padding-left 32.7907% // 141px / 430px
 			background-image url('../images/support-right.png')
 	
 			
 	&__icon
 		position absolute
-		top 1.5em
+		top 1.67em
 		left 0
 		background-repeat no-repeat
 		background-size 100% 100%
 		
 		&_shipping
-			left 6.9767%
+			left 7.4419% // 32px/430px
 			width 2.37em
 			height 2.37em
 			
@@ -68,7 +96,7 @@
 			background-image url('../images/shipping.png')
 			
 		&_return
-			left 14.0351%
+			left 14.4737% // 66px/456px
 			width 2.56em
 			height 3.62em
 			
@@ -77,8 +105,8 @@
 			background-image url('../images/return.png')
 		
 		&_support
-			top 1.25em
-			left 16.2791%
+			top 1.37em
+			left 15.3488% // 66px/430px
 			width 3em
 			height 3.06em
 			
@@ -88,12 +116,14 @@
 
 	&__text
 		font-size 1.5em
-		font-weight 700
-		line-height 1.8
+		font-weight 600
+		line-height 1.6
 		text-transform uppercase
 		
 		&_sm
+			padding-left 5px
 			font-size .875em
+			line-height 1.7143
 			text-transform capitalize
 			
 		@media screen and (min-width: 1440px)
@@ -101,26 +131,36 @@
 
 		
 .testimonials
-	background-color #d9bf8f
+	
+	&__container
+		background-color #d9bf8f
 	
 	&__column
 		padding 0
 	
-	&__title::after
-		position absolute
-		top 100%
-		left 37.1528%
-		width 25.6944%
-		content ''
+	&__title.title
+		padding-bottom 55px
 		
-		margin-top -2px
-		padding-bottom 2.4306%
-		background url('../images/triangle-22.png') no-repeat 
-		background-size cover
+		&::after
+			position absolute
+			top 100%
+			left 37.1528%
+			width 25.6944%
+			content ''
+			
+			margin-top -2px
+			padding-bottom 2.4306%
+			background url('../images/triangle-22.png') no-repeat 
+			background-size cover
+			
+.recent-products
+	&__title
+		margin-bottom 3px
 
 .products
+	margin-top 0
 	padding 15px 15px 0
-	border 1px solid #f8f8f8
+	border 1px solid gray // #f8f8f8
 	clearfix()
 	
 	&__item
@@ -143,6 +183,9 @@
 		padding-bottom 116.66%
 		
 .featured
+	
+	&__title
+		margin-bottom 8px
 		
 	&__col
 		margin-right 1.1628%
@@ -161,4 +204,5 @@
 		
 	&__product_lg
 		padding-bottom 177.1739%
+		
 	

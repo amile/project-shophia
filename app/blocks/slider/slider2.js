@@ -41,4 +41,3 @@ Slideshow.prototype.userClick = function () {
 const slider = new Slideshow('slider');
 
 slider.intervalSlideshow();
-

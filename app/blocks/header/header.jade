@@ -19,6 +19,10 @@ mixin header()
 					nav.main-menu
 						+list(mainMenu, 'main-menu__')
 
+					// .cart
+						img.cart__img(src='./assets/images/cart.png' alt='Cart')
+						p.cart__count 0
+
 					.currency-selector
 						p.currency-selector__value rupiah
 						select.currency-selector__selector
