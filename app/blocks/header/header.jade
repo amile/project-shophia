@@ -4,11 +4,11 @@ include ../list/list
 mixin header()
 	+b('header').header&attributes(attributes)
 
-			- var topBar = [{aLink: {href: '#'}, value: 'Welcome MSG!'}, {aLink: {href: '#'}, value: 'My account'}, {aLink: {href: '#'}, value: 'My wishlist'}, {aLink: {href: '#'}, value: 'Login'}];
+			- var topBar = [{aLink: {href: 'javascript:void(0)'}, value: 'Welcome MSG!'}, {aLink: {href: 'javascript:void(0)'}, value: 'My account'}, {aLink: {href: 'javascript:void(0)'}, value: 'My wishlist'}, {aLink: {href: 'javascript:void(0)'}, value: 'Login'}];
 
-			- var mainMenu = [{aLink: {href: '#'}, value: 'Home'}, {aLink: {href: '#'}, value: 'Gallery'}, {aLink: {href: '#'}, value: 'Categories'}, {aLink: {href: '#'}, value: 'Pages'}];
+			- var mainMenu = [{aLink: {href: '#'}, value: 'Home'}, {aLink: {href: 'javascript:void(0)'}, value: 'Gallery'}, {aLink: {href: 'javascript:void(0)'}, value: 'Categories'}, {aLink: {href: 'javascript:void(0)'}, value: 'Pages'}];
 
-			- var social = [{link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-fb.png', alt: 'fb'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-twitter.png', alt: 'twitter'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-pinterest.png', alt: 'pinterest'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-header-instagram.png', alt: 'instagram'}}];
+			- var social = [{link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-fb.png', alt: 'fb'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-twitter.png', alt: 'twitter'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-pinterest.png', alt: 'pinterest'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-instagram.png', alt: 'instagram'}}];
 
 			section.top-bar
 				+container
@@ -23,8 +23,11 @@ mixin header()
 						img.cart__img(src='./assets/images/cart.png' alt='Cart')
 						p.cart__count 0
 
-					.currency-selector
-						p.currency-selector__value rupiah
+					form.currency-selector(action='javascript:console.log( "success!");' method='post')
+						ul.list.currency-selector__list
+							li.list__item.currency-selector__value.currency-selector__value_display_block rupiah
+							li.list__item.currency-selector__value usd
+							li.list__item.currency-selector__value euro
 						select.currency-selector__selector
 							option(value='rupiah' selected) rupiah
 							option(value='usd') usd
