@@ -22,6 +22,7 @@ mixin main()
 		
 		+slider(slides)
 		section.support.main__row.main__row_support
+
 			+container
 				.col-1-3.support__col
 					.support__item.support__item_left
@@ -70,7 +71,7 @@ mixin main()
 			+title('Our Brands')(class='brands__title')
 			+container.brands__container
 				
-				each i in brands
+				for i in brands
 					+layout-column(class='brands__column col-1-6_brands')
 						.brand
 							img.brand__img(src=i.src alt=i.alt)

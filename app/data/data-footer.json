@@ -1,0 +1,66 @@
+{
+	"shops": [
+		{"aLink": {"href": "javascript:void(0)"}, "value": "New In"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Women"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Men"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Shoes"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Bags & Accessories"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Top Brands"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Sale & Special Offers"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Lookbook"}
+	],
+	"information": [
+		{"aLink": {"href": "javascript:void(0)"}, "value": "About Us"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Customer Service"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "New Collection"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Best Sellers"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Manufacturers"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Privacy policy"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Terms & Condition"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Blog"}
+	],
+	"customerService": [
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Search Terms"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Advanced Search"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Orders and Returns"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Contact Us"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "RSS"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Help & FAQs"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Consultant"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Store Locations"}
+	],
+	"footerSocial": [
+		{
+			"link": {"href": "#", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-footer-fb.png", 
+			"alt": "fb"}
+		}, 
+		{
+			"link": {"href": "#", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-footer-twitter.png", 
+			"alt": "twitter"}
+		}, 
+		{
+			"link": {"href": "#", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-footer-instagram.png", 
+			"alt": "instagram"}
+		}, 
+		{
+			"link": {"href": "#", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-footer-pinterest.png", 
+			"alt": "pinterest"}
+		}, 
+		{
+			"link": {"href": "#", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-footer-feed.png", 
+			"alt": "feed"}
+		}
+	],
+	"payments": [
+		{"src": "./assets/images/payment-visa.png", "alt": "Visa"}, 
+		{"src": "./assets/images/payment-mastercard.png", "alt": "MasterCard"}, 
+		{"src": "./assets/images/payment-american.png", "alt": "American Express"}, 
+		{"src": "./assets/images/payment-discover.png", "alt": "Discover"}
+	]
+}
+
