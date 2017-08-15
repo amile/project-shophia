@@ -1,0 +1,101 @@
+{
+	"slides": [
+		{"src": "./assets/images/slide-2.png"}, 
+		{"src": "./assets/images/slide-33.png"}, 
+		{"src": "./assets/images/slide-4.png"}, 
+		{"src": "./assets/images/slide-53.png"}
+	],
+	"featured": [
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_sm"}, 
+			"img": {"src": "./assets/images/featured-1_sm.png", "alt": "Some info"}, 
+			"button": "Shop now"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_sm"}, 
+			"img": {"src": "./assets/images/featured-2_sm.png", "alt": "Some info"}
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_lg"}, 
+			"img": {"src": "./assets/images/featured-3_lg.png", "alt": "Some info"}
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_sm"}, 
+			"img": {"src": "./assets/images/featured-4_sm.png", "alt": "Some info"}
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_sm"}, 
+			"img": {"src": "./assets/images/featured-5_sm.png", "alt": "Some info"}
+		}
+	],
+	"products": [
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-1.png", "alt": "Some info"}, 
+			"sale": "20", 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-2.png", "alt": "Some info"}, 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-3.png", "alt": "Some info"}, 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-4.png", "alt": "Some info"}, 
+			"sale": "40", 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-5.png", "alt": "Some info"}, 
+			"sale": "20", 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-6.png", "alt": "Some info"}, 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-7.png", "alt": "Some info"}, 
+			"button": "+ Add to cart"
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "class": "products__product"}, 
+			"img": {"src": "./assets/images/product-8.png", "alt": "Some info"}, 
+			"sale": "40", 
+			"button": "+ Add to cart"
+		}
+	],
+	"brands": [
+		{"src": "./assets/images/brand-bakery.png", "alt": "Bakery"}, 
+		{"src": "./assets/images/brand-cavalier.png", "alt": "Cavalier"}, 
+		{"src": "./assets/images/brand-harvest.png", "alt": "Harvest"}, 
+		{"src": "./assets/images/brand-landlock.png", "alt": "Landlock"}, 
+		{"src": "./assets/images/brand-spectrum.png", "alt": "Spectrum"}, 
+		{"src": "./assets/images/brand-home-energy.png", "alt": "Home Energy"}
+	],
+	"testimonials": [
+		{
+			"photo": "./assets/images/SandraDewi.png", 
+			"txt": "Sed ut perspiciatis <br> unde omnis iste natus error sit <br> voluptatem accusantium doloremque", 
+			"authorName": "Sandra Dewi", 
+			"authorJob": "Fashion stylish"
+		}, 
+		{
+			"photo": "./assets/images/ShaheerSheikh.png", 
+			"txt": "Sed ut perspiciatis <br> unde omnis iste natus error sit <br> voluptatem accusantium doloremque", 
+			"authorName": "Shaheer Sheikh", 
+			"authorJob": "Designer"
+		}
+
+	]
+}
+

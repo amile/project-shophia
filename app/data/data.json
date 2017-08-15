@@ -1,0 +1,32 @@
+{
+	"topBar": [
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Welcome MSG!"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "My account"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "My wishlist"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Login"}
+	],
+	"mainMenu": [
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Home"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Gallery"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Categories"}, 
+		{"aLink": {"href": "javascript:void(0)"}, "value": "Pages"}
+	],
+	"social": [
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank"},
+			"img": {"src": "./assets/images/social-header-fb.png", "alt": "fb"}
+		},
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-header-twitter.png", "alt": "twitter"}
+		},
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-header-pinterest.png", "alt": "pinterest"}
+		}, 
+		{
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
+			"img": {"src": "./assets/images/social-header-instagram.png", "alt": "instagram"}
+		}
+	]
+}

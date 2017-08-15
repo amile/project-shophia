@@ -41,6 +41,7 @@ function changeSelectedValue(event) {
 		$(el).off();
 	});
 } */
+
 function changeSelectedValue(event) {
 	event.stopPropagation();
 	const currentValue = $(this).text();
@@ -59,3 +60,16 @@ $('.currency-selector').click(function () {
 	$('.currency-selector__value').on('click', changeSelectedValue);
 });
 
+function hideMenu() {
+	console.log('I"m clicked');
+	$('.main-menu__menu').slideUp(600);
+	$('.main-menu').off('click', hideMenu);
+}
+
+function showMenu() {
+	console.log('I"m button');
+	$('.main-menu__menu').slideDown(600);
+	$('.main-menu').on('click', hideMenu);
+}
+
+$('.main-menu').on('click', showMenu);

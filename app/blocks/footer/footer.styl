@@ -4,7 +4,7 @@
 	padding-bottom 40px
 	color #6a6a6a
 	background-color #000
-	opacity .6
+	// opacity .6
 	
 	&__block_top
 		position relative
@@ -18,12 +18,10 @@
 		color #363636
 		background-color #141414
 		
-	&__col_right
-		padding-left 8px
-		
 	&__social
 		margin-top 2.56em // 41px
 		margin-bottom 2.25em // 36px
+		padding-left 3px
 	
 	&__social-item
 			width 3.125em
@@ -51,13 +49,10 @@
 .menu-group
 	display inline-block
 	
-	margin-right 13.8243% // 107px
-	text-align left
+	margin-right 8.2562% // 107px // (13.8243%)
+	vertical-align top
 	
-	padding-x(8px)
-	
-	&:nth-child(2)
-		margin-right 12.9199% // 100px
+	padding-x(8px)	
 	
 	&__title
 		margin-bottom 2.375em // 38px
@@ -76,12 +71,29 @@
 		font-size .875em
 		line-height 2.1429
 		color #6a6a6a
-	
+		
+		@media all and (max-width: 1220px)
+			font-size 1em
+		
+	&_information
+		margin-right 7.7932% // 101px // (12.9199%)
+		
 	&_service
-		margin-right 0
+		margin-right 9.4907% // 123px
 		
 	&_connected
-		margin 0 auto
+		margin-right 0
+		
+
+@media all and (max-width: 1130px)
+	.footer__col.menu-group
+		margin-right 7%
+		
+		&:last-child
+			margin-right 0
+		
+
+		
 
 		
 .form
@@ -91,7 +103,7 @@
 	border 1px solid #363636
 	
 	&__input
-		width 249px
+		width 20.75em // 249px
 		
 		padding-x(1.5em)
 		font-size .75em
@@ -107,7 +119,7 @@
 		background-color #363636
 
 .copyright
-	font-size .69em
+	font-size 11px
 	line-height 1.6364
 	color #6a6a6a
 	

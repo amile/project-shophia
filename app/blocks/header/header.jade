@@ -4,20 +4,24 @@ include ../list/list
 mixin header()
 	+b('header').header&attributes(attributes)
 
-			- var topBar = [{aLink: {href: 'javascript:void(0)'}, value: 'Welcome MSG!'}, {aLink: {href: 'javascript:void(0)'}, value: 'My account'}, {aLink: {href: 'javascript:void(0)'}, value: 'My wishlist'}, {aLink: {href: 'javascript:void(0)'}, value: 'Login'}];
+			- var headerData = getData('data');
 
-			- var mainMenu = [{aLink: {href: '#'}, value: 'Home'}, {aLink: {href: 'javascript:void(0)'}, value: 'Gallery'}, {aLink: {href: 'javascript:void(0)'}, value: 'Categories'}, {aLink: {href: 'javascript:void(0)'}, value: 'Pages'}];
+			- var topBar = headerData.topBar;
 
-			- var social = [{link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-fb.png', alt: 'fb'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-twitter.png', alt: 'twitter'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-pinterest.png', alt: 'pinterest'}}, {link: {href: 'javascript:void(0)', target: '_blank'}, img: {src: './assets/images/social-header-instagram.png', alt: 'instagram'}}];
+			- var mainMenu = headerData.mainMenu;
+
+			- var social = headerData.social;
 
 			section.top-bar
 				+container
 					p.top-bar__phone= 'Call +001 555 881'
 					+list(topBar, 'top-bar__account-')(class='top-bar__account')
 			section.header__header
-				+container
+				+container.header__container_header
 					nav.main-menu
-						+list(mainMenu, 'main-menu__')
+						// img.main-menu__button(alt='MENU' src='./assets/images/menu.png')
+						.main-menu__button_txt menu
+						+list(mainMenu, 'main-menu__')(class='main-menu__menu')
 
 					// .cart
 						img.cart__img(src='./assets/images/cart.png' alt='Cart')

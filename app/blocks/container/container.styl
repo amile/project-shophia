@@ -1,9 +1,15 @@
 .container
 	display block
-	// min-height 100px
-	min-width 1440px
-	
+	min-width 1040px
+	max-width 1440px
+		
 	margin 0 auto
 	padding-x(75px)
 	clearfix()
 	outline 1px solid blue
+	
+	@media all and (max-width: 1280px)
+		padding-x(50px)
+		
+	@media all and (max-width: 1080px)
+		padding-x(30px)

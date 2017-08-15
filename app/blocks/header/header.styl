@@ -1,6 +1,10 @@
 .header
 	position relative
 	display block
+	min-width 1040px
+	
+	&__container_header
+		min-height 4.94em
 	
 	&::after
 		position absolute
@@ -58,16 +62,19 @@
 			border none
 
 .header__header
-	padding-top 32px // 
+	position relative
+	padding-top 2em // 32px
 	padding-bottom 18px //
 	text-align center
 
 .logo
-	display inline-block
+	position absolute
+	top 2em
+	left 50%
 	width 14.25em //  228px
 	min-width 160px
 	
-	margin-left 26px // 5.5072% // 76px / 1380px
+	margin-left -7.125em // 5.5072% // 76px / 1380px
 	outline 1px solid yellow
 	
 	&__logo
@@ -75,10 +82,37 @@
 		height auto
 
 .main-menu
+	position relative
 	float left
 	
 	margin-top .56em
 	margin-left 5px
+	
+	&__menu.list
+		z-index 100
+		
+		@media all and (max-width: 1130px)
+			position absolute
+			top 0 // 2.2em
+			left 4.25em // 0
+			display none
+		
+			
+	&__button_txt
+		display none
+		
+		padding-x(1.16em)
+		padding-y(.83em)
+		font-size .75em
+		font-weight 600
+		line-height 1.25
+		color #fff
+		text-transform uppercase
+		background-color #000 // #363636
+		
+		@media all and (max-width: 1130px)
+			display block
+			
 	
 	&__item
 		display inline-block
@@ -87,7 +121,29 @@
 		font-family 'Playfair Display', serif
 		font-size 1.125em
 		font-style italic
-		// line-height 1.6667
+		background-color #fff
+		
+		@media all and (max-width: 1220px)
+			font-size 1.28em
+			
+		@media all and (max-width: 1130px)
+			display block
+			
+			margin 0
+			padding-left 1.5em
+			
+			padding-y(.5em)
+			padding-right 3em
+			font-size 1.125em
+			color #fff
+			
+			text-align left
+			background-color #000
+			border-bottom 1px solid #363636
+			
+			&:hover
+				color #d9bf8f
+
 
 .header__social
 	float right
@@ -99,6 +155,11 @@
 		height 34px
 		
 		margin-right 9px
+		
+.social.header__social
+	@media all and (max-width: 1130px)
+		display none
+		
 		
 .cart
 	position relative
@@ -181,15 +242,27 @@
 		width 8px
 		height 4px
 		content ''
-		background url('../images/down.png') no-repeat 
+		background url('../images/down.png') no-repeat
+		
+		z-index 101
 	
 	&__selector
 		display none
+		
+	&__list
+		position absolute
+		top 0
+		bottom 0
+		width 100%
+		height 100%
+		
+		z-index 100
 		
 	&__value
 		display none
 		
 		padding-left 1.16em
+		
 		padding-right 2.5em
 		padding-y(.83em)
 		
@@ -203,7 +276,7 @@
 		background-color #000
 		
 		&:hover
-			opacity .8
+			background-color #363636
 		
 		&_display_block
 			display block

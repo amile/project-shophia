@@ -4,7 +4,7 @@
 	display block
 	
 	&__row
-		opacity .8
+		// opacity .8
 		
 		&_featured
 			padding-top 40px
@@ -17,6 +17,14 @@
 			
 		&_testimonials
 			padding-top 89px
+			
+		@media screen and (max-width: 1130px)
+	
+			&_brands
+				padding-top 2.5em
+			
+			&_testimonials
+				padding-top 3em
 
 .brands
 	
@@ -29,6 +37,11 @@
 		display inline-block
 		float none
 		vertical-align middle
+	
+	
+	&__container.container
+		@media screen and (max-width: 1150px)
+			padding-x(70px)
 		
 
 .brand
@@ -37,10 +50,12 @@
 	
 	padding-x(15px)
 	overflow hidden
+	
+	@media all and (max-width: 1130px)
+			padding-bottom 20px
 		
 	&__img
-		max-width 100%
-		
+		max-width 100%	
 
 
 .support
@@ -98,7 +113,7 @@
 		&_return
 			left 14.4737% // 66px/456px
 			width 2.56em
-			height 3.62em
+			height 2.62em
 			
 			max-width 41px
 			max-height 42px
@@ -115,10 +130,13 @@
 			background-image url('../images/support.png')
 
 	&__text
-		font-size 1.875em // 1.5em
+		font-size 1.875em
 		font-weight 600
 		line-height 1.6
 		text-transform uppercase
+		
+		@media all and (max-width: 1440px)
+			font-size 1.6em
 		
 		&_sm
 			padding-left 5px
@@ -126,14 +144,23 @@
 			line-height 1.7143
 			text-transform capitalize
 			
-		@media screen and (min-width: 1440px)
-			font-size 1.875em
+			@media screen and (max-width: 1220px)
+				font-size 1em
+			
+		@media screen and (max-width: 1220px)
+			font-size 1.78em
+		
+		@media screen and (max-width: 1150px)
+				font-size 1.6em
 
 		
 .testimonials
 	
 	&__container
 		background-color #d9bf8f
+		
+		@media screen and (max-width: 1130px)
+			padding-bottom 30px
 	
 	&__column
 		padding 0
@@ -176,8 +203,7 @@
 				
 			&::after
 				border-left-color #f0985e
-				border-bottom-color #f0985e
-		
+				border-bottom-color #f0985e	
 	
 	&__product
 		padding-bottom 116.66%

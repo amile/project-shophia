@@ -4,17 +4,16 @@ include ../social/social
 mixin footer()
 	+b('footer').footer&attributes(attributes)
 
-		- var shops = ['New In', 'Women', 'Men', 'Shoes', 'Bags & Accessories', 'Top Brands', 'Sale & Special Offers', 'Lookbook'];
+		- var shops = [{aLink: {href: 'javascript:void(0)'}, value: 'New In'}, {aLink: {href: 'javascript:void(0)'}, value: 'Women'}, {aLink: {href: 'javascript:void(0)'}, value: 'Men'}, {aLink: {href: 'javascript:void(0)'}, value: 'Shoes'}, {aLink: {href: 'javascript:void(0)'}, value: 'Bags & Accessories'}, {aLink: {href: 'javascript:void(0)'}, value: 'Top Brands'}, {aLink: {href: 'javascript:void(0)'}, value: 'Sale & Special Offers'}, {aLink: {href: 'javascript:void(0)'}, value: 'Lookbook'}];
 
-		- var information = ['About Us', 'Customer Service', 'New Collection', 'Best Sellers','Manufacturers', 'Privacy policy', 'Terms & Condition', 'Blog'];
+		- var information = [{aLink: {href: 'javascript:void(0)'}, value: 'About Us'}, {aLink: {href: 'javascript:void(0)'}, value: 'Customer Service'}, {aLink: {href: 'javascript:void(0)'}, value: 'New Collection'}, {aLink: {href: 'javascript:void(0)'}, value: 'Best Sellers'}, {aLink: {href: 'javascript:void(0)'}, value: 'Manufacturers'}, {aLink: {href: 'javascript:void(0)'}, value: 'Privacy policy'}, {aLink: {href: 'javascript:void(0)'}, value: 'Terms & Condition'}, {aLink: {href: 'javascript:void(0)'}, value: 'Blog'}];
 
-		- var customerService = ['Search Terms', 'Advanced Search', 'Orders and Returns', 'Contact Us', 'RSS', 'Help & FAQs', 'Consultant', 'Store Locations'];
+		- var customerService = [{aLink: {href: 'javascript:void(0)'}, value: 'Search Terms'}, {aLink: {href: 'javascript:void(0)'}, value: 'Advanced Search'}, {aLink: {href: 'javascript:void(0)'}, value: 'Orders and Returns'}, {aLink: {href: 'javascript:void(0)'}, value: 'Contact Us'}, {aLink: {href: 'javascript:void(0)'}, value: 'RSS'}, {aLink: {href: 'javascript:void(0)'}, value: 'Help & FAQs'}, {aLink: {href: 'javascript:void(0)'}, value: 'Consultant'}, {aLink: {href: 'javascript:void(0)'}, value: 'Store Locations'}];
 
 		- var social = [{link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-fb.png', alt: 'fb'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-twitter.png', alt: 'twitter'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-instagram.png', alt: 'instagram'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-pinterest.png', alt: 'pinterest'}}, {link: {href: '#', target: '_blank'}, img: {src: './assets/images/social-footer-feed.png', alt: 'feed'}}];
 		
 		.footer__block_top
 			+container(class='footer__container_block-top')
-				.col-3-5
 					.footer__col.menu-group.menu-group_shops
 						h2.menu-group__title= 'Shops'
 						+list(shops, 'menu-group__')
@@ -27,8 +26,7 @@ mixin footer()
 						h2.menu-group__title= 'Customer Service'
 						+list(customerService, 'menu-group__')
 
-				.col-2-5.footer__col_right
-					.menu-group.menu-group_connected
+					.footer__col.menu-group.menu-group_connected
 						h2.menu-group__title= 'Stay connected'
 						+social(social, 'footer__')(class='footer__social')
 
