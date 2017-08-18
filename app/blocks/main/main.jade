@@ -12,6 +12,8 @@ mixin main()
 
 		- var slides = mainData.slides;
 
+		- var support = mainData.support;
+
 		- var featured = mainData.featured;
 
 		- var products = mainData.products;
@@ -21,24 +23,17 @@ mixin main()
 		- var testimonials = mainData.testimonials;
 		
 		+slider(slides)
+
 		section.support.main__row.main__row_support
 
 			+container
-				.col-1-3.support__col
-					.support__item.support__item_left
-						span.support__icon.support__icon_shipping
-						p.support__text= 'Free shipping'
-						p.support__text_sm= 'On orders over $200'
-				.col-1-3.support__col
-					.support__item.support__item_center
-						span.support__icon.support__icon_return
-						p.support__text= '30-days returns'
-						p.support__text_sm= 'Money back guarantee'
-				.col-1-3.support__col
-					.support__item.support__item_right
-						span.support__icon.support__icon_support
-						p.support__text= '24/7 support'
-						p.support__text_sm= 'Lifetime support'
+
+				for item in support
+					.col-1-3.support__col
+						.support__item(class='support__item_' + item.mod)
+							span.support__icon(class='support__icon_' + item.mod)
+							p.support__text= item.text
+							p.support__text_sm= item.smText
 
 		section.featured.main__row.main__row_featured
 			+title('HandPicked')(class='featured__title')

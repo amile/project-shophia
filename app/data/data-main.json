@@ -5,6 +5,11 @@
 		{"src": "./assets/images/slide-4.png"}, 
 		{"src": "./assets/images/slide-53.png"}
 	],
+	"support": [
+		{"mod": "shipping", "text": "Free shipping", "smText": "On orders over $200"}, 
+		{"mod": "return", "text": "30-days returns", "smText": "Money back guarantee"}, 
+		{"mod": "support", "text": "24/7 support", "smText": "Lifetime support"}
+	],
 	"featured": [
 		{
 			"link": {"href": "javascript:void(0)", "target": "_blank", "class": "featured__product featured__product_sm"}, 

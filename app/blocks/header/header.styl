@@ -98,7 +98,7 @@
 			display none
 		
 			
-	&__button_txt
+	&__button
 		display none
 		
 		padding-x(1.16em)
@@ -108,7 +108,11 @@
 		line-height 1.25
 		color #fff
 		text-transform uppercase
-		background-color #000 // #363636
+		background-color #000
+		transition(all .3s ease 0s)
+		
+		&:hover
+			background-color #363636
 		
 		@media all and (max-width: 1130px)
 			display block
@@ -264,8 +268,8 @@
 		padding-left 1.16em
 		
 		padding-right 2.5em
-		padding-y(.83em)
 		
+		padding-y(.83em)
 		font-size .75em
 		font-weight 600
 		line-height 1.25
@@ -274,6 +278,7 @@
 		text-align left
 		text-transform uppercase
 		background-color #000
+		transition(all .3s ease 0s)
 		
 		&:hover
 			background-color #363636
