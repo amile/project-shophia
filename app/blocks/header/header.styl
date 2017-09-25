@@ -1,7 +1,8 @@
 .header
 	position relative
 	display block
-	min-width 1040px
+	min-width $base_container_min-width
+	opacity .7
 	
 	&__container_header
 		min-height 4.94em
@@ -59,6 +60,9 @@
 		&:last-child
 			padding-right 0
 			border none
+		
+		&:hover
+			color #000
 
 .header__header
 	position relative
@@ -73,7 +77,7 @@
 	width 14.25em //  228px
 	min-width 160px
 	
-	margin-left -7.125em // 5.5072% // 76px / 1380px
+	margin-left -6.25em
 	outline 1px solid yellow
 	
 	&__logo
@@ -124,6 +128,9 @@
 		font-size 1.125em
 		font-style italic
 		background-color #fff
+		
+		&:hover
+			color darken(#d9bf8f, 30%)
 		
 		@media all and (max-width: 1220px)
 			font-size 1.28em
@@ -232,10 +239,10 @@
 .currency-selector
 	position relative
 	float right
-	min-width 6.125em
+	min-width 5.68em
 	
 	margin-top .75em
-	margin-left 48px //
+	margin-left 2.68em // 43px
 	
 	&::after
 		position absolute

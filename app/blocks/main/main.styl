@@ -2,9 +2,10 @@
 
 .main
 	display block
+	min-width $base_container_min-width
 	
 	&__row
-		// opacity .8
+		opacity .8
 		
 		&_featured
 			padding-top 40px
@@ -59,7 +60,7 @@
 
 
 .support
-	padding-top 65px //
+	padding-top 65px
 	
 	&__col
 		margin-left 0
@@ -135,7 +136,7 @@
 		line-height 1.6
 		text-transform uppercase
 		
-		@media all and (max-width: 1440px)
+		@media all and (max-width: 1439px)
 			font-size 1.6em
 		
 		&_sm
@@ -151,7 +152,7 @@
 			font-size 1.78em
 		
 		@media screen and (max-width: 1150px)
-				font-size 1.6em
+			font-size 1.6em
 
 		
 .testimonials
@@ -181,8 +182,23 @@
 			background-size cover
 			
 .recent-products
+		
 	&__title
 		margin-bottom 3px
+		
+// Mixin to change product__buttom background-color
+
+change_button_background-color($color)
+	.button
+		background-color $color
+		
+		&::before
+			border-right-color $color
+			border-bottom-color $color
+				
+		&::after
+			border-left-color $color
+			border-bottom-color $color
 
 .products
 	margin-top 0
@@ -193,20 +209,18 @@
 	&__item
 		margin-bottom 15px
 
-	&__item:nth-child(4n + 1) 
-		.button
-			background-color #f0985e
-			
-			&::before
-				border-right-color #f0985e
-				border-bottom-color #f0985e
-				
-			&::after
-				border-left-color #f0985e
-				border-bottom-color #f0985e	
+	&__item:nth-child(4n + 1)
+		change_button_background-color(#f0985e)
 	
 	&__product
 		padding-bottom 116.66%
+		
+	@media all and (max-width: 1130px)
+		&__item:nth-child(4n + 1)
+			change_button_background-color(#000)
+					
+		&__item:nth-child(3n + 1)
+			change_button_background-color(#f0985e)
 		
 .featured
 	

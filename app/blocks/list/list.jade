@@ -3,7 +3,7 @@ mixin list(list_of_items, prefix='')
 		for el in list_of_items
 			if el.aLink
 				li.list__item(class=prefix + 'item')
-					a.link.list__link(class=prefix + 'list')&attributes(el.aLink)!= el.value
+					a.link.list__link(class=prefix + 'link')&attributes(el.aLink)!= el.value
 			else
 				li.list__item(class=prefix + 'item')!= el
 					block

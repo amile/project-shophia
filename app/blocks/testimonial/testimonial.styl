@@ -1,33 +1,70 @@
-/* .testimonial
+.testimonial
 	display block
 	
-	padding-top 5.42%
-	padding-bottom 7.13%
+	padding-top 1.875em
+	padding-bottom 3.125em
 	clearfix()
 	
 	&__photo-wrapper
 		position relative
 		float left
-		width 37.98%
+		width 39.3798% // 254px/645px
 		
-		padding-top 49.61%
+		padding-top 49.6124% // 320px/645px
 		
 	&__photo-wrapper_right
 		float right
 		
-	&__body-wrapper
-		float left
-		width 62.02%
+	&__photo
+		position absolute
+		left 0
+		bottom 0
+		width 100%
 		
-		margin-top 10.85%
-		padding-x(15px)
+	&__body-wrapper
+		position relative
+		float right
+		width 60.6202%
+		
+		padding-top 49.6124% // 320px/645px
+		
 		
 	&__body-wrapper_right
-		float right
-		text-align right */
+		text-align right
+		
+	&__body
+		position absolute
+		left 0
+		
+		right 0
+		bottom 0
+		padding-x(15px)
+		
+	&__text
+		font-family 'Playfair Display', serif
+		font-size 1.125em
+		font-style italic
+		line-height 1.6667
+		color #fff
+
+		
+	&__author-name
+		margin-top 1.6em
+		font-family 'Playfair Display', serif
+		font-size 1.875em
+		font-style italic
+		color #000
+		
+		font-weight 700
+		
+	&__author-job
+		font-size .875em
+		line-height 2.75
+		color #7f7e7e
+		text-transform uppercase 
 		
 
-.testimonial
+/* .testimonial
 	flexbox-display()
 	flex-align-items(flex-end)
 	
@@ -80,5 +117,5 @@
 		font-size .875em
 		line-height 2.75
 		color #7f7e7e
-		text-transform uppercase
+		text-transform uppercase */
 		
