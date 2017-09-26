@@ -31,23 +31,23 @@
 	],
 	"footerSocial": [
 		{
-			"link": {"href": "#", "target": "_blank"}, 
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
 			"img": {"src": "./assets/images/social-footer-fb.png", "alt": "fb"}
 		}, 
 		{
-			"link": {"href": "#", "target": "_blank"}, 
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
 			"img": {"src": "./assets/images/social-footer-twitter.png", "alt": "twitter"}
 		}, 
 		{
-			"link": {"href": "#", "target": "_blank"}, 
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
 			"img": {"src": "./assets/images/social-footer-instagram.png", "alt": "instagram"}
 		}, 
 		{
-			"link": {"href": "#", "target": "_blank"}, 
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
 			"img": {"src": "./assets/images/social-footer-pinterest.png", "alt": "pinterest"}
 		}, 
 		{
-			"link": {"href": "#", "target": "_blank"}, 
+			"link": {"href": "javascript:void(0)", "target": "_blank"}, 
 			"img": {"src": "./assets/images/social-footer-feed.png", "alt": "feed"}
 		}
 	],
